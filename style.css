@@ -1,0 +1,22 @@
+.cities {
+    background-color: lightgray;
+    width: 300px;
+    height: 500px;
+    float: left;
+}
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.weatherInfo {
+    display: inline-block;
+    background-color: purple;
+}
+
+.forecastContainer {
+    margin-top: 40px;
+    display: inline-block;
+    background-color: pink;
+}
