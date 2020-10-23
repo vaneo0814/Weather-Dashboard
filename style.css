@@ -105,3 +105,8 @@ h5 {
 #search:hover {
     background-color: rgb(80, 127, 185);
 }
+
+p {
+    font-size: 25px;
+    background-color: rgb(133, 191, 133);
+}
