@@ -4,6 +4,7 @@ $(document).ready(function () {
     $("#search").on("click", function () {
         var userInput = $("#cityName").val().trim();
        cities.push(userInput); // the city from the textinput is added to our cities array shown above.
+       console.log(cities);
         $.ajax({
             method: "GET",
             url: "https://api.openweathermap.org/data/2.5/weather?q=" + userInput + "&units=imperial&appid=" + apiKey
@@ -133,15 +134,17 @@ $(document).ready(function () {
                 }
             }
         });
+        var cities1= []; //creating another empty array
         //create another ajax call and separate functions for city buttons.
         function renderCities() { //function to get the value of city and append to city blocks.
-            for (var i = 0; i < cities.length; i++) {
+            cities1.push(userInput); // the city from the textinput is added to our cities array shown above.
+            for (var i = 0; i < cities1.length; i++) {
                 var x = $("#cityList");
-                x.attr("data-city", cities[i]);
-                x.text(cities[i]);
+                x.attr("data-city", cities1[i]);
+                x.text(cities1[i]);
                 $("#cityBlocks").append(x);
             }
-            localStorage.setItem("Saved City", JSON.stringify(cities));
+            localStorage.setItem("Saved City", JSON.stringify(cities1));
             localStorage.getItem("Saved City");
         }
         //function to grab THIS attr, whichever city is clicked on and then grab the info and display on html.
