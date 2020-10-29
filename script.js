@@ -30,7 +30,7 @@ $(document).ready(function () {
 
             //getting the icon logo 
             var iconLogo = response.weather[0].icon;
-            var icon = "http://openweathermap.org/img/wn/" + iconLogo + "@2x.png";
+            var icon = "https://openweathermap.org/img/wn/" + iconLogo + "@2x.png";
             var addIcon = $(".name"); //where the icon is going to go..next to city name and date
             var iconImg = $("<img>").attr("src", icon);
             addIcon.append(iconImg); //appending so it can show
@@ -41,7 +41,7 @@ $(document).ready(function () {
 
             $.ajax({
                 method: "GET",
-                url: "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
+                url: "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
                 //url for UV index.
             }).then(function (uvResponse) {
                 //printing to html:
@@ -81,7 +81,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon1 = forecastResponse.list[0].weather[0].icon;
-                    var fcIcon1 = "http://openweathermap.org/img/wn/" + forecastIcon1 + "@2x.png";
+                    var fcIcon1 = "https://openweathermap.org/img/wn/" + forecastIcon1 + "@2x.png";
                     var addforecastIcon1 = $("#5dayCast"); //where the icon is going to go.
                     var iconImg1 = $("<img>").attr("src", fcIcon1);
                     addforecastIcon1.append(iconImg1, date1[0].date, date1[0].temperature, date1[0].humidity);
@@ -94,7 +94,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon2 = forecastResponse.list[i + 8].weather[0].icon;
-                    var fcIcon2 = "http://openweathermap.org/img/wn/" + forecastIcon2 + "@2x.png";
+                    var fcIcon2 = "https://openweathermap.org/img/wn/" + forecastIcon2 + "@2x.png";
                     var addforecastIcon2 = $("#5dayCast"); //where the icon is going to go.
                     var iconImg2 = $("<img>").attr("src", fcIcon2);
                     addforecastIcon2.append(iconImg2, date2[0].date, date2[0].temperature, date2[0].humidity);
@@ -107,7 +107,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon3 = forecastResponse.list[i + 16].weather[0].icon;
-                    var fcIcon3 = "http://openweathermap.org/img/wn/" + forecastIcon3 + "@2x.png";
+                    var fcIcon3 = "https://openweathermap.org/img/wn/" + forecastIcon3 + "@2x.png";
                     var addforecastIcon3 = $("#5dayCast"); //where the icon is going to go.
                     var iconImg3 = $("<img>").attr("src", fcIcon3);
                     addforecastIcon3.append(iconImg3, date3[0].date, date3[0].temperature, date3[0].humidity);
@@ -120,7 +120,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon4 = forecastResponse.list[i + 24].weather[0].icon;
-                    var fcIcon4 = "http://openweathermap.org/img/wn/" + forecastIcon4 + "@2x.png";
+                    var fcIcon4 = "https://openweathermap.org/img/wn/" + forecastIcon4 + "@2x.png";
                     var addforecastIcon4 = $("#5dayCast"); //where the icon is going to go.
                     var iconImg4 = $("<img>").attr("src", fcIcon4);
                     addforecastIcon4.append(iconImg4, date4[0].date, date4[0].temperature, date4[0].humidity);
@@ -133,7 +133,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon5 = forecastResponse.list[i + 32].weather[0].icon; //icon
-                    var fcIcon5 = "http://openweathermap.org/img/wn/" + forecastIcon5 + "@2x.png"; //grabbing icon
+                    var fcIcon5 = "https://openweathermap.org/img/wn/" + forecastIcon5 + "@2x.png"; //grabbing icon
                     var addforecastIcon5 = $("#5dayCast");
                     var iconImg5 = $("<img>").attr("src", fcIcon5);
                     addforecastIcon5.append(iconImg5, date5[0].date, date5[0].temperature, date5[0].humidity);
@@ -171,7 +171,7 @@ $(document).ready(function () {
 
             //getting the icon logo 
             var iconLogo = buttonResponse.weather[0].icon;
-            var icon = "http://openweathermap.org/img/wn/" + iconLogo + "@2x.png";
+            var icon = "https://openweathermap.org/img/wn/" + iconLogo + "@2x.png";
             console.log(iconLogo);
             var addIcon = $(".name"); //where the icon is g22oing to go..next to city name and date
             var iconImg = $("<img>").attr("src", icon);
@@ -182,7 +182,7 @@ $(document).ready(function () {
             var lon = JSON.stringify(buttonResponse.coord.lon);
             $.ajax({
                 method: "GET",
-                url: "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
+                url: "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
             }).then(function (fcUV) {
                 //printing to html
                 $(".uv").html("<b>" + "UV Index: " + fcUV.value + " ");
@@ -220,7 +220,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon1 = fcBtnResponse.list[0].weather[0].icon;
-                    var fcIcon1 = "http://openweathermap.org/img/wn/" + forecastIcon1 + "@2x.png";
+                    var fcIcon1 = "https://openweathermap.org/img/wn/" + forecastIcon1 + "@2x.png";
                     var addforecastIcon1 = $("#5dayCast"); //where the icon is going to go.
                     var iconImg1 = $("<img>").attr("src", fcIcon1);
                     addforecastIcon1.append(iconImg1, date1[0].date, date1[0].temperature, date1[0].humidity);
@@ -233,7 +233,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon2 = fcBtnResponse.list[i + 8].weather[0].icon;
-                    var fcIcon2 = "http://openweathermap.org/img/wn/" + forecastIcon2 + "@2x.png";
+                    var fcIcon2 = "https://openweathermap.org/img/wn/" + forecastIcon2 + "@2x.png";
                     var addforecastIcon2 = $("#5dayCast"); //where the icon is going to go.
                     var iconImg2 = $("<img>").attr("src", fcIcon2);
                     addforecastIcon2.append(iconImg2, date2[0].date, date2[0].temperature, date2[0].humidity);
@@ -246,7 +246,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon3 = fcBtnResponse.list[i + 16].weather[0].icon;
-                    var fcIcon3 = "http://openweathermap.org/img/wn/" + forecastIcon3 + "@2x.png";
+                    var fcIcon3 = "https://openweathermap.org/img/wn/" + forecastIcon3 + "@2x.png";
                     var addforecastIcon3 = $("#5dayCast"); //where the icon is going to go.
                     var iconImg3 = $("<img>").attr("src", fcIcon3);
                     addforecastIcon3.append(iconImg3, date3[0].date, date3[0].temperature, date3[0].humidity);
@@ -259,7 +259,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon4 = fcBtnResponse.list[i + 24].weather[0].icon;
-                    var fcIcon4 = "http://openweathermap.org/img/wn/" + forecastIcon4 + "@2x.png";
+                    var fcIcon4 = "https://openweathermap.org/img/wn/" + forecastIcon4 + "@2x.png";
                     var addforecastIcon4 = $("#5dayCast"); //where the icon is going to go.
                     var iconImg4 = $("<img>").attr("src", fcIcon4);
                     addforecastIcon4.append(iconImg4, date4[0].date, date4[0].temperature, date4[0].humidity);
@@ -272,7 +272,7 @@ $(document).ready(function () {
                         }
                     ];
                     var forecastIcon5 = fcBtnResponse.list[i + 32].weather[0].icon; //icon
-                    var fcIcon5 = "http://openweathermap.org/img/wn/" + forecastIcon5 + "@2x.png"; //grabbing icon
+                    var fcIcon5 = "https://openweathermap.org/img/wn/" + forecastIcon5 + "@2x.png"; //grabbing icon
                     var addforecastIcon5 = $("#5dayCast");
                     var iconImg5 = $("<img>").attr("src", fcIcon5);
                     addforecastIcon5.append(iconImg5, date5[0].date, date5[0].temperature, date5[0].humidity);
