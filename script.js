@@ -14,7 +14,6 @@ $(document).ready(function () {
                 cities.push(userInput);
                 localStorage.setItem("cities", JSON.stringify(cities));
                 renderCities(userInput);
-
             }
             var date = moment().format("MMM Do YYYY");
 
@@ -141,19 +140,12 @@ $(document).ready(function () {
             }
         });
     });
-    //create another ajax call and separate functions for city buttons.
     function renderCities(city) { //function to get the value of city and append to city blocks.
         var li = $("<li>").addClass("list-group-item").attr("data-city", city).text(city);
-
         $("#cityList").append(li);
-
-
     }
-    //function to grab THIS attr, whichever city is clicked on and then grab the info and display on html.
     //have to do the same for the 5 day weather forecast.
     function displayCityInfo(city) {
-        //var city = $(this).text()
-        //console.log("City " + city);
         $.ajax({
             method: "GET",
             url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey
@@ -209,7 +201,6 @@ $(document).ready(function () {
             url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + apiKey
         }).then(function (fcBtnResponse) {
             for (var i = 0; i < 8; i++) {
-
                 if ((fcBtnResponse.list[i].dt_txt).substring(11) === "12:00:00") {
                     $("#5dayCast").html("<h1>5 Day Forecast</h1>" + "<hr>"); //title
                     var date1 = [
